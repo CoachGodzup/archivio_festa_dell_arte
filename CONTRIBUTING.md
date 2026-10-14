@@ -12,7 +12,7 @@ manifesti, programmi di sala e foto delle Feste dell'Arte passate.
 
 ## Come inviare
 
-1. Scrivi all'indirizzo indicato nella gallery, allegando i file
+1. Scrivi a **archivio.festadellarte@outlook.it**, allegando i file
    (o un link da cui scaricarli).
 2. Per ogni file indica: **anno, edizione, dove l'hai avuto**
    (es. «2017, 23ª ed., volantino preso in piazza»).
