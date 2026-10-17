@@ -1,11 +1,11 @@
 # Archivio della Festa dell'Arte — Gravellona Lomellina
 
 Raccolta pubblica di volantini, manifesti e foto di programma della
-**Festa dell'Arte di Gravellona Lomellina** (edizioni 2014–2026; le precedenti
-1995–2013 restano documentate solo via testi in archivio privato).
+**Festa dell'Arte di Gravellona Lomellina** (edizioni 1995, 2008–2026; delle
+edizioni 1996–2007 e di alcune altre restano pochi materiali).
 
 - Gallery: `index.html` (sezioni per edizione, con tema e file).
-- Originali: `volantini/` (30 file: jpg/jpeg/png/webp + 1 PDF).
+- Originali: `volantini/` (115 file: 103 jpg, 3 jpeg, 5 png, 1 webp + 3 PDF).
 
 ## Diritti
 
