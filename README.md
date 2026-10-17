@@ -5,7 +5,7 @@ Raccolta pubblica di volantini, manifesti e foto di programma della
 edizioni 1996–2007 e di alcune altre restano pochi materiali).
 
 - Gallery: `index.html` (sezioni per edizione, con tema e file).
-- Originali: `volantini/` (117 file: 105 jpg, 3 jpeg, 5 png, 1 webp + 3 PDF).
+- Originali: `volantini/` (118 file: 106 jpg, 3 jpeg, 5 png, 1 webp + 3 PDF).
 
 ## Diritti
 
