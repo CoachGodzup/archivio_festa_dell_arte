@@ -25,6 +25,12 @@ h1{font-size:1.6em}h2{border-bottom:2px solid #999;padding-bottom:.2em;margin-to
 .trascr pre{white-space:pre-wrap;background:#fff;border:1px solid #ddd;padding:.6em .8em;font-size:.85em;line-height:1.35;margin:.5em 0 0 0;font-family:inherit}
 .trascr ul.dati{list-style:none;margin:.4em 0 0 0;padding:.5em .8em;background:#fff;border:1px solid #eee;font-size:.82em;color:#444}
 .facciata{margin:.8em 0;background:#fff;border:1px solid #ddd;padding:6px;max-width:1000px}.facciata img{width:100%;height:auto;display:block}.facciata figcaption{font-size:.8em;color:#555;margin-top:.3em}
+.tornasu{position:fixed;right:1rem;bottom:1rem;z-index:50;width:2.8em;height:2.8em;padding:0;border:1px solid #bbb;border-radius:50%;background:rgba(255,255,255,.94);color:#333;font-family:Georgia,serif;font-size:1.1em;line-height:1;cursor:pointer;box-shadow:0 2px 6px rgba(0,0,0,.12);display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transform:translateY(8px);transition:opacity .2s,transform .2s,visibility .2s}
+.tornasu.visibile{opacity:1;visibility:visible;transform:none}
+.tornasu:hover{background:#fff;border-color:#888}
+.tornasu:focus-visible{outline:2px solid #666;outline-offset:3px}
+@media (prefers-reduced-motion: reduce){.tornasu{transition:none}}
+@media print{.tornasu{display:none}}
 footer{margin-top:3em;font-size:.85em;color:#666;border-top:1px solid #ccc;padding-top:1em}</style>
 </head><body>
 <h1>Festa dell'Arte — Gravellona Lomellina</h1>
@@ -825,6 +831,7 @@ PESSIMINO
 <p class='desc'>Depliant ufficiale del Parco dei Tre Laghi (PDF del 2014), in due facciate da tre ante ciascuna. Racconta la storia del parco, le regole, il picnic e gli orari; tra le feste principali cita la Festa dell'Arte e la Notte delle Anime. <a href='volantini/parco-tre-laghi-depliant.pdf'>Scarica il PDF originale</a> (428 KB).</p>
 <figure class='facciata'><a href='volantini/parco-tre-laghi-depliant-p1.jpg'><img loading='lazy' src='volantini/parco-tre-laghi-depliant-p1.jpg' width='2258' height='1075' alt='Depliant del Parco dei Tre Laghi, facciata esterna'></a><figcaption>Facciata esterna: «Gravellona è un paese d'arte», le feste, i contatti e la copertina.</figcaption></figure>
 <figure class='facciata'><a href='volantini/parco-tre-laghi-depliant-p2.jpg'><img loading='lazy' src='volantini/parco-tre-laghi-depliant-p2.jpg' width='2258' height='1075' alt='Depliant del Parco dei Tre Laghi, facciata interna'></a><figcaption>Facciata interna: storia del parco, picnic, orari e regole.</figcaption></figure>
+<button class='tornasu' type='button' aria-label='Torna in cima alla pagina' title='Torna in cima'>&#8593;</button>
 <footer><p>Hai locandine mancanti? Scrivici a <a href="mailto:archivio.festadellarte@outlook.it">archivio.festadellarte@outlook.it</a> (vedi anche CONTRIBUTING nel repo).</p>
 <p>Raccolta documentaristica a cura del progetto di storia locale di Gravellona Lomellina.
 I manifesti restano dei rispettivi autori e organizzatori: uso di studio, verificare i diritti prima di ogni riuso.</p></footer>
@@ -903,6 +910,23 @@ I manifesti restano dei rispettivi autori e organizzatori: uso di studio, verifi
       if(history.pushState) history.pushState(null,'',this.getAttribute('data-vai'));
     });
   }
+})();
+</script>
+<script>
+(function(){
+  var b=document.querySelector('.tornasu');
+  if(!b) return;
+  var ridotta=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function aggiorna(){
+    if(window.scrollY>600) b.classList.add('visibile');
+    else b.classList.remove('visibile');
+  }
+  b.addEventListener('click',function(){
+    window.scrollTo({top:0,behavior:ridotta?'auto':'smooth'});
+  });
+  window.addEventListener('scroll',aggiorna,{passive:true});
+  window.addEventListener('resize',aggiorna);
+  aggiorna();
 })();
 </script>
 </body></html>
